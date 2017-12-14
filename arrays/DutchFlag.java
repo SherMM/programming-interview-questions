@@ -7,6 +7,7 @@ public class DutchFlag {
 
     public static int[] groupByPivot(int[] numbers, int pivot) {
         int index = 0, i;
+        // less than
         int[] ordered = new int[numbers.length];
         for (i = 0; i < numbers.length; i++) {
             if (numbers[i] < pivot) {
@@ -15,6 +16,7 @@ public class DutchFlag {
             }
         }
 
+        // equal to
         for (i = 0; i < numbers.length; i++) {
             if (numbers[i] == pivot) {
                 ordered[index] = numbers[i];
@@ -22,6 +24,7 @@ public class DutchFlag {
             }
         }
 
+        // greater than
         for (i = 0; i < numbers.length; i++) {
             if (numbers[i] > pivot) {
                 ordered[index] = numbers[i];
