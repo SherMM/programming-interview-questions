@@ -8,12 +8,8 @@ def insert_at_head(ll, node):
     """
     docstring
     """
-    curr = ll.head 
-    if curr is None:
-        ll.head = node
-    else:
-        node.next = curr
-        ll.head = node
+    node.next = ll.head
+    ll.head = node
     
 
 if __name__ == "__main__":
